@@ -20,14 +20,13 @@ from results import RESULTS
 load_dotenv()
 BOT_TOKEN = os.getenv("BOT_TOKEN")
 
-PDFS_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "pdfs")
-
-PDF_FILES = {
-    "А": "Потеря контакта с собой.pdf",
-    "Б": "Страх перемен.pdf",
-    "В": "Страх проявляться.pdf",
-    "Г": "Синдром самозванца и Стыд.pdf",
-    "Д": "Тревога и Самосаботаж.pdf",
+# Paste the file_id for each result video below (run get_file_ids.py to collect them).
+VIDEO_FILE_IDS = {
+    "А": "BQACAgIAAxkBAAIBRWo6njON_ss4tYEmcZFRAwNwtZxIAALpoQACV7WoSbRYPKjI9Hg0PAQ",  # Потеря контакта с собой
+    "Б": "BQACAgIAAxkBAAIBSGo6nult1jY-enMxtc7tz_CBZPPLAAJfngACVJiwSUG7oOCrTCsEPAQ",  # Страх перемен
+    "В": "BQACAgIAAxkBAAIBSmo6nvxy0jCY0pJqoMQYH1XxsSZUAAJ2nwACYJjBSSQMBVygVffBPAQ",  # Страх проявляться
+    "Г": "BQACAgIAAxkBAAIBTGo6nw5jDK4tE-lxNxZKXECjKcFkAAIYrQACYJjRSaZm9UjvrApkPAQ",  # Синдром самозванца и Стыд
+    "Д": "",  # Тревога и Самосаботаж
 }
 
 CTA_MESSAGE = (
@@ -146,21 +145,14 @@ async def handle_answer(update: Update, context: ContextTypes.DEFAULT_TYPE) -> i
     await typing_pause(query.message.chat_id, context.bot, seconds=2)
     await query.message.reply_text("Твой результат готов! 🎯")
 
-    pdf_filename = PDF_FILES.get(result_letter)
-    if pdf_filename:
-        pdf_path = os.path.join(PDFS_DIR, pdf_filename)
-        try:
-            with open(pdf_path, "rb") as pdf_file:
-                await context.bot.send_document(
-                    chat_id=query.message.chat_id,
-                    document=pdf_file,
-                    filename=pdf_filename,
-                )
-        except FileNotFoundError:
-            print(f"PDF not found: {pdf_path}")
-            await query.message.reply_text(f"Твой результат: {result_name}")
+    video_file_id = VIDEO_FILE_IDS.get(result_letter)
+    if video_file_id:
+        await context.bot.send_video(
+            chat_id=query.message.chat_id,
+            video=video_file_id,
+        )
     else:
-        print(f"No PDF mapped for result letter: {result_letter}")
+        print(f"No video file_id set for result letter: {result_letter}")
         await query.message.reply_text(f"Твой результат: {result_name}")
 
     await asyncio.sleep(10)
