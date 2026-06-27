@@ -26,7 +26,7 @@ VIDEO_FILE_IDS = {
     "Б": "BQACAgIAAxkBAAIBSGo6nult1jY-enMxtc7tz_CBZPPLAAJfngACVJiwSUG7oOCrTCsEPAQ",  # Страх перемен
     "В": "BQACAgIAAxkBAAIBSmo6nvxy0jCY0pJqoMQYH1XxsSZUAAJ2nwACYJjBSSQMBVygVffBPAQ",  # Страх проявляться
     "Г": "BQACAgIAAxkBAAIBTGo6nw5jDK4tE-lxNxZKXECjKcFkAAIYrQACYJjRSaZm9UjvrApkPAQ",  # Синдром самозванца и Стыд
-    "Д": "",  # Тревога и Самосаботаж
+    "Д": "BQACAgIAAxkBAAIBYGo_9PRUI7iumksl3pKd73TLTGAsAALnoQACpJzZSVASia3PLzPtPAQ",  # Тревога и Самосаботаж
 }
 
 CTA_MESSAGE = (
