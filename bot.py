@@ -22,11 +22,11 @@ BOT_TOKEN = os.getenv("BOT_TOKEN")
 
 # Paste the file_id for each result video below (run get_file_ids.py to collect them).
 VIDEO_FILE_IDS = {
-    "А": "BQACAgIAAxkBAAIBRWo6njON_ss4tYEmcZFRAwNwtZxIAALpoQACV7WoSbRYPKjI9Hg0PAQ",  # Потеря контакта с собой
-    "Б": "BQACAgIAAxkBAAIBSGo6nult1jY-enMxtc7tz_CBZPPLAAJfngACVJiwSUG7oOCrTCsEPAQ",  # Страх перемен
-    "В": "BQACAgIAAxkBAAIBSmo6nvxy0jCY0pJqoMQYH1XxsSZUAAJ2nwACYJjBSSQMBVygVffBPAQ",  # Страх проявляться
-    "Г": "BQACAgIAAxkBAAIBTGo6nw5jDK4tE-lxNxZKXECjKcFkAAIYrQACYJjRSaZm9UjvrApkPAQ",  # Синдром самозванца и Стыд
-    "Д": "BQACAgIAAxkBAAIBYGo_9PRUI7iumksl3pKd73TLTGAsAALnoQACpJzZSVASia3PLzPtPAQ",  # Тревога и Самосаботаж
+    "А": "BQACAgIAAxkBAAIBdGpFNuFMVYpS73S_hyqpq_XrhP0hAAIcnwACR6sRSu451xR1UxgnPAQ",  # Потеря контакта с собой
+    "Б": "BQACAgIAAxkBAAIBdmpFNxH8Kd7NVGwWsz0V38bgyfI3AAIenwACR6sRSvn0-zqnCvIePAQ",  # Страх перемен
+    "В": "BQACAgIAAxkBAAIBeGpFNyISWDGbwYTnhjCinO24-XLyAAIfnwACR6sRSk-kaeNUpZeXPAQ",  # Страх проявляться
+    "Г": "BQACAgIAAxkBAAIBempFNzSIo7fuYiRD1PJ04TF1RI8bAAIjnwACR6sRSh6gi4e-9mVnPAQ",  # Синдром самозванца и Стыд
+    "Д": "BQACAgIAAxkBAAIBfGpFN0BVhkcjZ55SUn3xo6Xq8HXoAAIonwACR6sRSq71ruS8BqIUPAQ",  # Тревога и Самосаботаж
 }
 
 CTA_MESSAGE = (
